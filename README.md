@@ -62,7 +62,7 @@ TrimmomaticSE -threads 2 -phred33 data/raw_data/ERR1942280.fastq data/trimmed/$(
 bioawk -c fastx '{print ">"$name"\n"$seq}' data/trimmed/filename.trim.fastq
 ```
 
-12. Add code to use `blastn` to search for the top match of each sequence against the `nt` database. The following command will output a csv file called `blast_results.csv` with one row for each query sequence in `query_seqs.fasta`. I recommend you put this in a for loop as well, so you can BLAST each of the different samples files without having to write out the code manually. *If you don't change the `-out` parameter before running this on different files, it will overwrite the output.* I would recommend having these `csv` files get stored in a subdirectory in the `output` folder. This step may take many hours to run, and so it is essential that you do it inside of a `tmux` session. You may want to test this once to make sure it works on a single file, and then you can leave it to run overnight.
+12. Add code to use `blastn` to search for the top match of each sequence against the `nt` database. The following command will output a csv file called `blast_results.csv` with one row for each query sequence in `query_seqs.fasta`. I recommend you put this in a for loop as well, so you can BLAST each of the different samples files without having to write out the code manually. *If you don't change the `-out` parameter before running this on different files, it will overwrite the output.* I would recommend having these `csv` files get stored in a subdirectory in the `output` folder. This step may take many hours to run, and so it is essential that you do it inside of a `tmux` session. You may want to test this once to make sure it works on a single file, and then you can leave it to run overnight on all the files.
 
 ```
 # options and what they're for:
@@ -76,7 +76,7 @@ bioawk -c fastx '{print ">"$name"\n"$seq}' data/trimmed/filename.trim.fastq
 # This cuts down on the number of uncultured or environmental matches
 # -query is the fasta file of sequences we want to search for matches to
 
-blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2017-09-21_GenBank_Environmental_Uncultured_to_Exclude.txt -query query_seqs.fasta
+blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2018-09-19_environmental_sequence.gi -query query_seqs.fasta
 ```
 
 13. Commit the script as you work on it, whenever you make a good chunk of progress. Make sure you write
