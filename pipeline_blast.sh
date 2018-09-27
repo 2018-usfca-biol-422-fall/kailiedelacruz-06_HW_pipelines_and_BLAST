@@ -16,8 +16,20 @@ do
     fastq-dump -v $SRA_number -O data/raw_data
 done
 
-# Add code to create QC reports for each of the
+# Create QC reports for each of the
 # runs using the FastQC program
 echo "Add code to create QC reports"
 fastqc data/raw_data/*.fastq --outdir=output/fastqc
+
+# Trim the sequences based on their quality 
+# scores 
+echo "Trim sequences based on their quality scores"
+
+# Convert fastq files into fasta files so they 
+# can be used as BLAST queries 
+echo "Convert fastq files into fasata files"
+
+# Use blastn to search for the top match of 
+# each sequence against the nt database 
+echo "Use blastn to search for the top match of each sequence"
 
