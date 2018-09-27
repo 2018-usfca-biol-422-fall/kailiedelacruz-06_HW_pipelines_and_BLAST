@@ -13,7 +13,7 @@
 echo "Download files in run table to raw data directory"
 for SRA_number in $(cut -f 6 data/metadata/fierer_forensic_hand_mouse_SraRunTable.txt | tail -n +2)
 do
-    fastq-dump -v $SRA_number -O data/raw_data
+    fastq-dump -v "$SRA_number" -O data/raw_data
 done
 
 # Create QC reports for each of the
