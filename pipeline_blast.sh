@@ -16,4 +16,8 @@ do
     fastq-dump -v $SRA_number -O data/raw_data
 done
 
+# Add code to create QC reports for each of the
+# runs using the FastQC program
+echo "Add code to create QC reports"
+fastqc data/raw_data/*.fastq --outdir=output/fastqc
 
