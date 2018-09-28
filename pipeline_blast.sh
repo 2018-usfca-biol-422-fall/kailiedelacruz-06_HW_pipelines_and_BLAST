@@ -32,6 +32,10 @@ done
 # Convert fastq files into fasta files so they 
 # can be used as BLAST queries 
 echo "Convert fastq files into fasta files"
+for convert in data/raw_data/*.fastq
+do 
+	bioawk -c fastx '{print ">"$name"\n"$seq}' "$convert" > data/trim/"$(basename "$convert" .fasta)".trim.fasta 
+done
 
 # Use blastn to search for the top match of 
 # each sequence against the nt database 
