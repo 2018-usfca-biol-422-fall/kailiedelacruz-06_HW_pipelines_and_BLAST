@@ -34,10 +34,14 @@ done
 echo "Convert fastq files into fasta files"
 for convert in data/raw_data/*.fastq
 do 
-	bioawk -c fastx '{print ">"$name"\n"$seq}' "$convert" > data/trim/"$(basename -s .fastq $convert)".trim.fasta 
+	bioawk -c fastx '{print ">"$name"\n"$seq}' "$convert" > data/trim/"$(basename -s .fastq "$convert")".trim.fasta 
 done
 
 # Use blastn to search for the top match of 
 # each sequence against the nt database 
 echo "Use blastn to search for the top match of each sequence"
+for convert in data/trim/*.trim.fasta
+do
+	blastn -db /blast-db/nt -num_threads 2 -outfmt '10 sscinames std' -out output/blast_results/"$(basename -s .trim.fasta "$convert")"_blast_results.csv -max_target_seqs 1 -negative_gilist /blast-db/2018-09-19_environmental_sequence.gi -query "$convert"
+done
 
