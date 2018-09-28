@@ -24,12 +24,15 @@ fastqc data/raw_data/*.fastq --outdir=output/fastqc
 # Trim the sequences based on their quality 
 # scores 
 echo "Trim sequences based on their quality scores"
+for trim in data/raw_data/*.fastq
+do 
+	TrimmomaticSE -threads 2 -phred33 $trim data/trim/$(basename "$trim" .fastq).trim.fastq LEADING:5 TRAILING:5 SLIDINGWINDOW:8:25 MINLEN:15
+done 
 
 # Convert fastq files into fasta files so they 
 # can be used as BLAST queries 
-echo "Convert fastq files into fasata files"
+echo "Convert fastq files into fasta files"
 
 # Use blastn to search for the top match of 
 # each sequence against the nt database 
 echo "Use blastn to search for the top match of each sequence"
-
