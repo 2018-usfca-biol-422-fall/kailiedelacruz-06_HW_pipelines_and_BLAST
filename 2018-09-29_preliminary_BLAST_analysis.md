@@ -40,4 +40,20 @@
 # its overall sequence, ERR1942281 has 61 counts of another overrepresented sequence that takes 
 # up only 14.5% of its overall sequence. 
 
-  
+# Using BLAST, I was also able to analyze the data found in the 19 files. In looking at the top 5 
+# most abundant species of bacteria found in all of the results, almost all of the files
+# contained "bacterium" in these results. Very broad, the result of bacterium suggests that
+# this could have been a species that did not have a specific name, or it could have also been
+# a group of species that did not have a specific differentiation from the others. With this,
+# the bacterium species in one set of data could be very different from the bacterium sepcies
+# in the other sets of data. Another very common species found, was Staphylococcus succinus,
+# which is the most abundant skin-colonizing bacteria that is also responsible for painful skin
+# infections. In comparing the types of bacteria found on male palms compared to female palms, 
+# I was able to come to the conclusion that female palms contain more variability and diversity 
+# in the species of bacteria found. Specifically, while female palms revealed different species 
+# in each set of data, with no similarities besides the broad "bacterium", male palms showed 
+# many similarities. Specifically, many of the male palms studied contained Solemya 
+# pervenicosa gill symbiont, Staphylococcus succinus, Aquitalea sp., Cardiobacterium sp. 
+# feline oral taxon 346., etc. In looking at the computer mice that were observed, the species
+# of bacteria found were similar to the species that were found on the male palms (Staphylococcus 
+# succinus, Aquitalea sp., Solemya pervenicosa gill symbiont)  
