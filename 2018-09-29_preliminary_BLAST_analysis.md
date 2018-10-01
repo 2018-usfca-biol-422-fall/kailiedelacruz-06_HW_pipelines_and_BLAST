@@ -56,4 +56,17 @@
 # pervenicosa gill symbiont, Staphylococcus succinus, Aquitalea sp., Cardiobacterium sp. 
 # feline oral taxon 346., etc. In looking at the computer mice that were observed, the species
 # of bacteria found were similar to the species that were found on the male palms (Staphylococcus 
-# succinus, Aquitalea sp., Solemya pervenicosa gill symbiont)  
+# succinus, Aquitalea sp., Solemya pervenicosa gill symbiont). According to studies done, similar to 
+# what is found on human skin, Staphylococcus bacteria is the second most common found bacteria on 
+# computer mice and keyboards. In studying the bacteria within the contact between human palms and 
+# computer mice, it makes sense that Staphylococcus succinus is prevalent. 
+
+# In analyzing 19 files using FastQC, that give us information about the types of bacteria that is found 
+# on female and male palms and computer mice, I was able to conclude that in summary, the files were 
+# basically very similar to each other. However, the sequence lengths and sequence length distributions,
+# because they were of variable sizes, could have possibly skewed the data. In analyzing the files
+# using BLAST, I came to the conclusion that female palms are home to a diverse group of bacteria species, 
+# while male palms have more of a reoccurring pattern in the species. Comparing this data to the computer 
+# mice, it made sense that the palms and the mice both contained a prevalent amount of Staphylococcus 
+# succinus, as it is the most abundant skin-colonizing bateria and the second most common bacteria found
+# on computer keyboards and mice. 
