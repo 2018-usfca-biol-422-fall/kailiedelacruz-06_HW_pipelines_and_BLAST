@@ -1,3 +1,6 @@
+# Analysis of BLAST Results of 20 Files from Fierer et al. Study 
+
+## Introduction
 
  The bacterial communities found on skin is very diverse from person to person [Fierer et al.]
  In the Fierer et al. study, they hypothesized that they could match skin bacteria left on objects to skin-associated
@@ -8,6 +11,8 @@
  the object to the human individual that had touched it through the use of a high-throughput 
  pyrosequencing-based approach to compare the bacterial communities on objects 
  and the associated skin.
+
+## Analysis of QC Reports 
 
  Given 20 fastq files, I was able to summarize the data found in them through QC checks ran 
  with FastQC. This process provided us with basic statistics, per base sequence quality, 
@@ -37,6 +42,8 @@
  its overall sequence, ERR1942281 has 61 counts of another overrepresented sequence that takes 
  up only 14.5% of its overall sequence. 
 
+## Analysis of BLAST Results 
+
  Using BLAST, I was also able to analyze the data found in the 20 files. In looking at the top 5 
  most abundant species of bacteria found in all of the results, almost all of the files
  contained "bacterium" in these results. Very broad, the result of bacterium suggests that
@@ -58,7 +65,9 @@
  computer mice and keyboards. In studying the bacteria within the contact between human palms and 
  computer mice, it makes sense that *Staphylococcus succinus* is prevalent. 
 
- In analyzing 19 files using FastQC, that give us information about the types of bacteria that is found 
+## Conclusion
+ 
+In analyzing 20 files using FastQC, that give us information about the types of bacteria that is found 
  on female and male palms and computer mice, I was able to conclude that in summary, the files were 
  basically very similar to each other. However, the sequence lengths and sequence length distributions,
  because they were of variable sizes, could have possibly skewed the data. In analyzing the files
