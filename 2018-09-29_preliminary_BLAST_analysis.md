@@ -1,4 +1,4 @@
-# Analysis of BLAST Results of 20 Files from Fierer et al. Study 
+# Sequence QC and BLAST Analysis of 20 Fasta Files from Fierer et al. Study 
 
 ## Introduction
 
